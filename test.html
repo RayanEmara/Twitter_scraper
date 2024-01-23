@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <link href="/css/style.css?v=19" rel="stylesheet" type="text/css"/>
+  <link href="/css/fontello.css?v=2" rel="stylesheet" type="text/css"/>
+  <link href="/css/themes/nitter.css" rel="stylesheet" type="text/css"/>
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/site.webmanifest" rel="manifest"/>
+  <link color="#ff6c60" href="/safari-pinned-tab.svg" rel="mask-icon"/>
+  <link href="https://nitter.net/opensearch" rel="search" title="nitter" type="application/opensearchdescription+xml"/>
+  <link href="https://twitter.com/search?f=live&amp;q=include%3Anativeretweets+Hello&amp;src=typed_query" rel="canonical"/>
+  <title>
+   Search (Hello) | nitter
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#1F1F1F" name="theme-color"/>
+  <meta content="object" property="og:type"/>
+  <meta content="Search (Hello)" property="og:title"/>
+  <meta content="" property="og:description"/>
+  <meta content="Nitter" property="og:site_name"/>
+  <meta content="en_US" property="og:locale"/>
+  <link as="font" crossorigin="anonymous" href="/fonts/fontello.woff2?21002321" rel="preload" type="font/woff2"/>
+ </head>
+ <body>
+  <nav>
+   <div class="inner-nav">
+    <div class="nav-item">
+     <a class="site-name" href="/">
+      nitter
+     </a>
+    </div>
+    <a href="/">
+     <img alt="Logo" class="site-logo" src="/logo.png"/>
+    </a>
+    <div class="nav-item right">
+     <div class="icon-container">
+      <a class="icon-search" href="/search" title="Search">
+      </a>
+     </div>
+     <div class="icon-container">
+      <a class="icon-bird" href="https://twitter.com/search?f=live&amp;q=include%3Anativeretweets+Hello&amp;src=typed_query" title="Open in Twitter">
+      </a>
+     </div>
+     <a href="https://liberapay.com/zedeus">
+      <svg class="lp" viewbox="0 0 40.6 52.3">
+       <g transform="matrix(0.83,0,0,0.83,-158,-261)">
+        <path d="m202.5,366c-3.1 0-5.5-0.4-7.3-1.2-1.8-0.8-3-1.9-3.8-3.3-0.8-1.4-1.1-3-1.1-4.8 0-1.8 0.3-3.7 0.8-5.8l8.3-34.8 10.2-1.6-9.1 37.8c-0.2 0.8-0.3 1.5-0.3 2.2 0 0.7 0.1 1.2 0.4 1.7 0.3 0.5 0.7 0.9 1.3 1.2 0.6 0.3 1.5 0.5 2.7 0.6l-2 8.1">
+        </path>
+        <path d="m239.2 344.3c0 3.2-0.5 6.1-1.6 8.8-1 2.6-2.5 4.9-4.4 6.9-1.9 1.9-4.1 3.4-6.7 4.5-2.6 1.1-5.4 1.6-8.5 1.6-1.5 0-3-0.1-4.5-0.4l-3 11.9h-9.7l10.9-45.4c1.7-0.5 3.7-1 6-1.4 2.3-0.4 4.7-0.6 7.3-0.6 2.4 0 4.6 0.4 6.3 1.1 1.8 0.7 3.2 1.8 4.4 3 1.1 1.3 2 2.8 2.5 4.5 0.5 1.7 0.8 3.6 0.8 5.5m-23.8 13.4c0.7 0.2 1.7 0.3 2.8 0.3 1.7 0 3.3-0.3 4.7-1 1.4-0.6 2.6-1.5 3.6-2.7 1-1.1 1.7-2.5 2.3-4.1 0.5-1.6 0.8-3.4 0.8-5.3 0-1.9-0.4-3.5-1.2-4.8-0.8-1.3-2.3-2-4.3-2-1.4 0-2.7 0.1-3.9 0.4l-4.6 19.1">
+        </path>
+       </g>
+      </svg>
+     </a>
+     <div class="icon-container">
+      <a class="icon-info" href="/about" title="About">
+      </a>
+     </div>
+     <div class="icon-container">
+      <a class="icon-cog" href="/settings?referer=%2Fsearch%3Fq%3DHello%26f%3Dtweets" title="Preferences">
+      </a>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="container">
+   <div class="timeline-container">
+    <div class="timeline-header">
+     <form action="/search" autocomplete="off" class="search-field" method="get">
+      <input name="f" style="display: none; " value="tweets"/>
+      <div class="pref-group pref-input pref-inline">
+       <input name="q" placeholder="Enter search..." type="text" value="Hello"/>
+      </div>
+      <button type="submit">
+       <div class="icon-container">
+        <span class="icon-search" title="">
+        </span>
+       </div>
+      </button>
+      <input id="search-panel-toggle" type="checkbox"/>
+      <label for="search-panel-toggle">
+       <div class="icon-container">
+        <span class="icon-down" title="">
+        </span>
+       </div>
+      </label>
+      <div class="search-panel">
+       <span class="search-title">
+        Filter
+       </span>
+       <div class="search-toggles">
+        <label class="pref-group checkbox-container">
+         Retweets
+         <input name="f-nativeretweets" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Media
+         <input name="f-media" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Videos
+         <input name="f-videos" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         News
+         <input name="f-news" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Verified
+         <input name="f-verified" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Native videos
+         <input name="f-native_video" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Replies
+         <input name="f-replies" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Links
+         <input name="f-links" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Images
+         <input name="f-images" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Safe
+         <input name="f-safe" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Quotes
+         <input name="f-quote" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Pro videos
+         <input name="f-pro_video" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+       </div>
+       <span class="search-title">
+        Exclude
+       </span>
+       <div class="search-toggles">
+        <label class="pref-group checkbox-container">
+         Retweets
+         <input name="e-nativeretweets" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Media
+         <input name="e-media" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Videos
+         <input name="e-videos" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         News
+         <input name="e-news" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Verified
+         <input name="e-verified" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Native videos
+         <input name="e-native_video" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Replies
+         <input name="e-replies" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Links
+         <input name="e-links" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Images
+         <input name="e-images" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Safe
+         <input name="e-safe" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Quotes
+         <input name="e-quote" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+        <label class="pref-group checkbox-container">
+         Pro videos
+         <input name="e-pro_video" type="checkbox"/>
+         <span class="checkbox">
+         </span>
+        </label>
+       </div>
+       <div class="search-row">
+        <div>
+         <span class="search-title">
+          Time range
+         </span>
+         <div class="date-range">
+          <span class="date-input">
+           <input name="since" type="date" value=""/>
+           <div class="icon-container">
+            <span class="icon-calendar" title="">
+            </span>
+           </div>
+          </span>
+          <span class="search-title">
+           -
+          </span>
+          <span class="date-input">
+           <input name="until" type="date" value=""/>
+           <div class="icon-container">
+            <span class="icon-calendar" title="">
+            </span>
+           </div>
+          </span>
+         </div>
+        </div>
+        <div>
+         <span class="search-title">
+          Near
+         </span>
+         <div class="pref-group pref-input">
+          <input name="near" placeholder="Location..." type="text" value=""/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </form>
+    </div>
+    <ul class="tab">
+     <li class="tab-item active">
+      <a href="?f=tweets&amp;q=Hello">
+       Tweets
+      </a>
+     </li>
+     <li class="tab-item">
+      <a href="?f=users&amp;q=Hello">
+       Users
+      </a>
+     </li>
+    </ul>
+    <div class="timeline">
+     <div class="timeline-item">
+      <a class="tweet-link" href="/phantoph0bia/status/1748157818765472143#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="retweet-header">
+         <span>
+          <div class="icon-container">
+           <span class="icon-retweet" title="">
+           </span>
+           🇵🇸 Twisted_amalgamation_2022 🇵🇸 retweeted
+          </div>
+         </span>
+        </div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/phantoph0bia">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1745271962157420544%2FPTiGkRvf_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/phantoph0bia" title="ghost">
+            ghost
+           </a>
+           <a class="username" href="/phantoph0bia" title="@phantoph0bia">
+            @phantoph0bia
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/phantoph0bia/status/1748157818765472143#m" title="Jan 19, 2024 · 1:37 AM UTC">
+            13h
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        hello it's me loser from bfdi i need your help please give me your credit card details so i can continue planting… — i am a sickly victorian child and this is the last thing i will ever see. goodbye.
+        <a href="https://curiouscat.live/phantoph0bia/post/1343444284">
+         curiouscat.live/phantoph0bia…
+        </a>
+       </div>
+       <div class="attachments">
+        <div class="gallery-row" style="">
+         <div class="attachment image">
+          <a class="still-image" href="/pic/orig/media%2FGEK0RR9WkAEMQC5.jpg" target="_blank">
+           <img alt="" src="/pic/media%2FGEK0RR9WkAEMQC5.jpg%3Fname%3Dsmall%26format%3Dwebp"/>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+          12
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+          6
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+          1
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+          63
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/HelloHarbi/status/1748363690603323569#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/HelloHarbi">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1717937418979180544%2F1NRHW42s_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/HelloHarbi" title="Hello Harbi">
+            Hello Harbi
+           </a>
+           <a class="username" href="/HelloHarbi" title="@HelloHarbi">
+            @HelloHarbi
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/HelloHarbi/status/1748363690603323569#m" title="Jan 19, 2024 · 3:16 PM UTC">
+            2s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        Badan S gemetar.
+
+Pov S : Aku kira aku sudah mengatasi ketakutan terhadap orang ini, bau rokok yang menyengat menempel dibajuku, mata biru dan bekas luka itu. Ternyata aku … masih ketakutan seperti anak usia 11 tahun.
+
+V menatap S sambil ngangkat dagu S.
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/yes_hi_hello_/status/1748363690116551034#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/yes_hi_hello_">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1737201723335229440%2FbHW8HvIX_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/yes_hi_hello_" title="Gina Ʊ 🐴">
+            Gina Ʊ 🐴
+           </a>
+           <a class="username" href="/yes_hi_hello_" title="@yes_hi_hello_">
+            @yes_hi_hello_
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/yes_hi_hello_/status/1748363690116551034#m" title="Jan 19, 2024 · 3:16 PM UTC">
+            2s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="replying-to">
+        Replying to
+        <a href="/MikeMifflin11">
+         @MikeMifflin11
+        </a>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        😭 oh I hate this for you.
+Feel better soon my friend.
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/airtel_care/status/1748363686891122823#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/airtel_care">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1024574852949266435%2FgZQVrX2A_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/airtel_care" title="airtel_care">
+            airtel_care
+           </a>
+           <a class="username" href="/airtel_care" title="@airtel_care">
+            @airtel_care
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/airtel_care/status/1748363686891122823#m" title="Jan 19, 2024 · 3:16 PM UTC">
+            3s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="replying-to">
+        Replying to
+        <a href="/abdul_adediran">
+         @abdul_adediran
+        </a>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        Hello
+        <a href="/abdul_adediran" title="Abdullateef">
+         @abdul_adediran
+        </a>
+        , we empathize. Kindly share the affected number via DM for check and assistance. Thank you. ^Emily.
+        <a href="https://nitter.net/messages/compose?recipient_id=1024573431315091458">
+         nitter.net/messages/compose…
+        </a>
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/JohnHMorris/status/1748363684747903380#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/JohnHMorris">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1694405268350603264%2FpKSSIw4J_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/JohnHMorris" title="Sales Is Between">
+            Sales Is Between
+           </a>
+           <a class="username" href="/JohnHMorris" title="@JohnHMorris">
+            @JohnHMorris
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/JohnHMorris/status/1748363684747903380#m" title="Jan 19, 2024 · 3:16 PM UTC">
+            3s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="replying-to">
+        Replying to
+        <a href="/Alan_Couzens">
+         @Alan_Couzens
+        </a>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        Your comment applies to many fields - hello
+        <a href="/search?q=%23sales">
+         #sales
+        </a>
+        ! Coaching in sales is great! Which is easy to say ... except sales is O/H and in a derivative relationship with core business. Both sales supply &amp; demand are unstable. Tough to maintain the coaching orientation. Self-fulfulling.
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/Bernadotte22/status/1748065498544140606#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="retweet-header">
+         <span>
+          <div class="icon-container">
+           <span class="icon-retweet" title="">
+           </span>
+           Mo Saeed retweeted
+          </div>
+         </span>
+        </div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/Bernadotte22">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1747315566082138112%2Fo9ly8MCl_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/Bernadotte22" title="Emelia 🇸🇪">
+            Emelia 🇸🇪
+           </a>
+           <a class="username" href="/Bernadotte22" title="@Bernadotte22">
+            @Bernadotte22
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/Bernadotte22/status/1748065498544140606#m" title="Jan 18, 2024 · 7:31 PM UTC">
+            19h
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        Hello world
+it’s Gaza
+        <a href="/search?q=%23GazaGeniocide">
+         #GazaGeniocide
+        </a>
+       </div>
+       <div class="attachments card">
+        <div class="gallery-video">
+         <div class="attachment video-container">
+          <img src="/pic/amplify_video_thumb%2F1748065425294778368%2Fimg%2F3PyDLP8mcNUNRvuS.jpg%3Fname%3Dsmall%26format%3Dwebp"/>
+          <div class="video-overlay">
+           <form action="/enablehls" method="post">
+            <input name="referer" style="display: none; " value="/search?q=Hello&amp;f=tweets"/>
+            <button type="submit">
+             Enable hls playback
+            </button>
+           </form>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+          84
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+          1,417
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+          47
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+          1,853
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-play" title="">
+          </span>
+          0
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/professorauggie/status/1748363682038632957#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/professorauggie">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1538841423218212864%2FVTR8DXYh_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/professorauggie" title="Vaibhav Kushwaha">
+            Vaibhav Kushwaha
+           </a>
+           <a class="username" href="/professorauggie" title="@professorauggie">
+            @professorauggie
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/professorauggie/status/1748363682038632957#m" title="Jan 19, 2024 · 3:15 PM UTC">
+            4s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        Hello,
+I have completed
+        <a href="/search?q=%23Day18">
+         #Day18
+        </a>
+        of
+        <a href="/search?q=%23365daysofcode">
+         #365daysofcode
+        </a>
+        Challenge with
+        <a href="/scaler_official" title="SCALER">
+         @scaler_official
+        </a>
+        Question Solved: Best Time to Buy and Sell Stocks III
+Question Link:
+        <a href="https://www.interviewbit.com/problems/best-time-to-buy-and-sell-stocks-iii/">
+         interviewbit.com/problems/be…
+        </a>
+        Scaler discord community link:
+        <a href="https://discord.gg/scaler-by-interviewbit-780066247601291285">
+         discord.gg/scaler-by-intervi…
+        </a>
+        <a href="/search?q=%23scalerdiscord">
+         #scalerdiscord
+        </a>
+        <a href="/search?q=%23codewithscaler">
+         #codewithscaler
+        </a>
+        <a href="/search?q=%23365daysofcodescaler">
+         #365daysofcodescaler
+        </a>
+       </div>
+       <div class="attachments">
+        <div class="gallery-row" style="">
+         <div class="attachment image">
+          <a class="still-image" href="/pic/orig/media%2FGENvZX5bUAEQlSa.jpg" target="_blank">
+           <img alt="" src="/pic/media%2FGENvZX5bUAEQlSa.jpg%3Fname%3Dsmall%26format%3Dwebp"/>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <a class="tweet-link" href="/Fallen_Li0n/status/1748363681778249914#m">
+      </a>
+      <div class="tweet-body">
+       <div>
+        <div class="tweet-header">
+         <a class="tweet-avatar" href="/Fallen_Li0n">
+          <img alt="" class="avatar round" src="/pic/profile_images%2F1697719926574759936%2FUUaxeGOF_bigger.jpg"/>
+         </a>
+         <div class="tweet-name-row">
+          <div class="fullname-and-username">
+           <a class="fullname" href="/Fallen_Li0n" title="HELLo there 🇺🇦">
+            HELLo there 🇺🇦
+           </a>
+           <a class="username" href="/Fallen_Li0n" title="@Fallen_Li0n">
+            @Fallen_Li0n
+           </a>
+          </div>
+          <span class="tweet-date">
+           <a href="/Fallen_Li0n/status/1748363681778249914#m" title="Jan 19, 2024 · 3:15 PM UTC">
+            4s
+           </a>
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="replying-to">
+        Replying to
+        <a href="/dohuya_profiley">
+         @dohuya_profiley
+        </a>
+       </div>
+       <div class="tweet-content media-body" dir="auto">
+        А ти пробувала просто слухати діалоги?))
+       </div>
+       <div class="tweet-stats">
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-comment" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-retweet" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-quote" title="">
+          </span>
+         </div>
+        </span>
+        <span class="tweet-stat">
+         <div class="icon-container">
+          <span class="icon-heart" title="">
+          </span>
+         </div>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="show-more">
+      <a href="?f=tweets&amp;q=Hello&amp;cursor=DAADDAABCgABGENvhCbXIbUKAAIYQ2-BXpYwugAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUYQ2-EukAnEAoABhhDb4S6P9jwAAA">
+       Load more
+      </a>
+     </div>
+     <div class="top-ref">
+      <div class="icon-container">
+       <a class="icon-down" href="#" title="">
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
