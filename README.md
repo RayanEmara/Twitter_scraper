@@ -5,6 +5,7 @@ Script for scraping the twitter front end API using a nitter instance ( nitter.n
 ## Road map
 
 - [x] Implement day by day pagination
+- [ ] Refactor code for better readability
 - [ ] Adding a serious database solution
 - [ ] Rewriting in java/rust
 - [ ] Sanitizing sensitive info
