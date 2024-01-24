@@ -9,8 +9,10 @@ import time
 if __name__ == '__main__':
     
     # Set time constraints 
-    START_DATE  = date(2023, 12 , 31) # I want tp scrape from this
-    FINISH_DATE = date(2023, 12 ,  1) # To this
+    START_DATE  = date(2024, 1 , 24) # I want tp scrape from this
+    FINISH_DATE = date(2024, 1 ,  2) # To this
+
+
     START_UNTIL = START_DATE + timedelta(days = 1) # Just the day after that st dt
 
     # Set variables for dates so that we can later change them
@@ -34,7 +36,9 @@ if __name__ == '__main__':
             'since': var_since_param.strftime('%Y-%m-%d'),
             'until': var_until_param.strftime('%Y-%m-%d'),
             'near': '',
-            'cursor': cursor
+            'cursor': cursor,
+            'e-nativeretweets': 'on',
+            'e-replies': 'on'
             }
             response = requests.get(config.CURL_BASE_URL, params=curl_params, headers=config.CURL_HEADERS)
 

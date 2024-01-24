@@ -1,4 +1,4 @@
-SEARCH_QUERY    = "#BuonAnno"
+SEARCH_QUERY    = "#Gaza"
 SINCE_PARAM     = '2023-12-08'
 UNTIL_PARAM     = '2023-12-08'
 CURL_BASE_URL = 'https://nitter.net/search'

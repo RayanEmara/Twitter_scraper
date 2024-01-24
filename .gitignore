@@ -120,6 +120,7 @@ LOG.csv
 
 # Test stuff
 testing.py
+scrapetwitter.py
 
 # Celery stuff
 celerybeat-schedule
