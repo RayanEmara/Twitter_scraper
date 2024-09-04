@@ -4,11 +4,6 @@ import requests
 
 import time
 
-
-# CONSTS
-
-
-# Function to save tweets to a CSV file
 def save_to_csv(data, file_path):
     if not data:
         print("No data to save.")
@@ -19,11 +14,11 @@ def save_to_csv(data, file_path):
     with open(file_path, 'a', newline='', encoding='utf-8') as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=keys , delimiter= "|")
 
-        # If the file is empty, write header
+
         if csv_file.tell() == 0:
             writer.writeheader()
 
-        # Write data to CSV
+
         writer.writerows(data)
 
 def get_stat(item, index):
@@ -63,45 +58,33 @@ def from_timelinehtml_to_tweets(html_content_of_page):
 
     The next page cursor parameter is extracted from the 'show more' container and represents the cursor for the next timeline slice.
     """
-    # Takes the html content of a file or page 
+    
     soup = bs4.BeautifulSoup(html_content_of_page, 'lxml')
-    # print(soup.contents)
-
-    # Find the show more container and get the next page cursor
+    
+    
     show_more_container = soup.find_all('div', class_='show-more')[-1]
     next_page_cursor = show_more_container.find('a')['href'] if show_more_container and show_more_container.find('a') else None
     
-    # Extract cursor parameter
     cursor_param = None
     if next_page_cursor:
         parsed_url = urlparse(next_page_cursor)
         query_params = parse_qs(parsed_url.query)
         cursor_param = query_params.get('cursor', [None])[0]
 
-
-    # Get timeline items to iterate on, ONLY get timeline-item not show more, that is the cursor for the previous timeline-slice
     timeline_items = soup.find_all(lambda tag: tag.name == 'div' and tag.get('class') == ['timeline-item'])
     
-    # Manage the case where there's no tweets
     if not timeline_items:
         return []
 
     tweets = []
-    # Extract relevant info for each tweet
+    
     for item in timeline_items:
         
         tweet_data = {}
 
-        # Tweet author
         username_element = item.select_one('a.username')
         tweet_data['author'] = username_element['title'] if username_element and 'title' in username_element.attrs else 'Unknown user'
-
-        # Tweet author
         tweet_data['date'] = item.select_one('span.tweet-date a')['title'] if item.select_one('span.tweet-date a') else 'No date available'
-        # tweet_data['body'] = item.select_one('div.tweet-content').get_text() if item.select_one('div.tweet-content').get_text() else None
-        
-        # Tweet stats
-        # Num likes, retweets, comments, replies
         tweet_data['num_likes'] = get_stat(item, 3)
         tweet_data['num_retweets'] = get_stat(item, 1)
         tweet_data['num_comments'] = get_stat(item, 0)
@@ -126,7 +109,6 @@ if __name__ == '__main__':
 
     finished_items = False
     while not finished_items:
-        # Update the cursor in the curl_params dictionary
         curl_params = {
             'f': 'tweets',
             'q': SEARCH_QUERY,
@@ -135,20 +117,17 @@ if __name__ == '__main__':
             'near': '',
             'cursor': cursor
         }
-        # Make the request
+        
         response = requests.get(CURL_BASE_URL, params=curl_params, headers=CURL_HEADERS)
 
-        # Check the response
         if response.status_code == 200:
             try:
                 html_page_data = response.text
                 tweets, cursor = from_timelinehtml_to_tweets(html_page_data)
 
-                # Print and save tweets
                 for tweet in tweets:
                     print(tweet)
 
-                # Save tweets to CSV file
                 save_to_csv(tweets, CSV_LOG_FILE_PATH)
 
                 print(f"Cursor: {cursor}")
