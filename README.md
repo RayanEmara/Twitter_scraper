@@ -1,6 +1,6 @@
 # Twitter_scraper
 
-Script for scraping the twitter front end API using a nitter instance ( nitter.net in this case).
+Script for scraping the nitter front end API using a nitter instance ( nitter.poast.net in this case).
 
 ## Road map
 
