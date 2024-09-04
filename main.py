@@ -26,10 +26,10 @@ if __name__ == '__main__':
                 # Do
         # Initalize cursor as empty
         cursor = ''
-        # Initalize finished_items as False
+        
         finished_items = False
         while not finished_items:
-            ## Make the request
+      
             curl_params = {
             'f': 'tweets',
             'q': config.SEARCH_QUERY,
@@ -42,21 +42,17 @@ if __name__ == '__main__':
             }
             response = requests.get(config.CURL_BASE_URL, params=curl_params, headers=config.CURL_HEADERS)
 
-            # Check the response
             if response.status_code == 200:
                 try:
-                    # print(var_since_param)
-                    # print(var_until_param)
-                    
-                    # print(curl_params)
+
                     html_page_data = response.text
                     tweets, cursor = from_timelinehtml_to_tweets(html_page_data)
                     print('Updated cursor')
-                    # Print and save tweets
+
                     for tweet in tweets:
                         print(tweet)
 
-                    # Save tweets to CSV file
+
                     save_to_csv(tweets, config.CSV_LOG_FILE_PATH)
 
                     print(f"Cursor: {cursor}")
